@@ -6,7 +6,7 @@ var sg = require('sendgrid')(process.env.SG_KEY);
 var fromEmail = new helper.Email('test@example.com');
 var toEmail = new helper.Email('malinda.iw@gmail.com');
 var subject = 'Test subject';
-var content = new helper.Content('text/plain', 'Hello, this email is send using the sendgrid service');
+var content = new helper.Content('text/html', '<i>Hello</i>, <b>this email</b> is sent using the sendgrid service');
 var mail = new helper.Mail(fromEmail, subject, toEmail, content);
 
 var attachment = new helper.Attachment();
